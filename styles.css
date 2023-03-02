@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-image: url(Images/background.jpg);
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    color: white;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.presentation {
+    position: absolute;
+
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0;
+    line-height: 40px;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 100;
+    opacity: 90%;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight:500;
+}
+
+.filtre {
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+#adresse_filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    
+}
+
+
+.filtre button {
+    width: 200px;
+    height: 90%;
+
+}
+
+.left_header {
+    background-color: rgba(255, 255, 255, 0.541);
+    width: 80%;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    border-radius: 2px 0px 0px 2px;
+    padding: 3px;
+    justify-content: space-around;
+}
+
+.left_header input {
+   
+    background-color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    box-sizing: border-box;
+    
+}
+
+.right_header {
+    width: 20%;
+    height: 100%;
+    background-color: rgba(85, 176, 85, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+
+    
+    select {
+        height: 20px;
+    }
+
+    .left_header input {
+        height: 20px;
+    }
+
+
+
+   
+   
+
+
+
+.container {
+    width: 70%;
+    padding-top: 20px;
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.result h3 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.result span {
+    font-weight: bold;
+}
+
+.result button {
+    border: none;
+    border-radius: 2px;
+    padding: 5px 8px;
+    filter: drop-shadow(0px 1px 1px black);
+    background: linear-gradient(rgba(255, 255, 255, 0.948),rgba(228, 228, 228, 0.907));
+}
+
+.button_fleche {
+    width: 10px;
+}
+
+.voiture{
+    width: 70%;
+}
+
+.container_voitures {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    padding: 20px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    line-height: 30px;
+    align-self: flex-start;
+}
+
+.right button {
+    width: 150px;
+    padding: 10px 0px;
+    background: linear-gradient(rgba(93, 224, 60, 0.8),rgba(30, 144, 2, 0.8));
+    color: white;
+    border: none;
+    border-radius: 3px;
+    filter: drop-shadow(0px 2px 2px black);
+}
+
+.left_cross, .right_cross {
+    width: 5%;
+}
+
+.left_cross {
+    transform: rotate(90deg);
+}
+
+.right_cross {
+    transform: rotate(-90deg);
+}
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    padding: 50px 0px 100px 0px;
+}
+
+.img_left {
+height: 10%;
+width: 30%;
+}
+
+.img_left img {
+    width: 100%;
+    height: 10%;
+}
+
+.coordonnes {
+    line-height: 20px;
+    height: 10%;
+    font-size: 1em;
+}
+
+.coordonnes h3 {
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-1000px);
+    transition: transform 500ms;
+    width: 100%;
+    background-color: #fff;
+    color: grey;
+}
+
+nav a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: grey;
+}
+
+nav a:hover {
+    background-color: grey;
+    color: white;
+}
+
+#burger {
+    display: none;
+}
+
+#burger:checked+nav {
+    transform: translateY(+30px);
+    transition: transform 500ms;
+}
+
+
+#style_burger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: linear-gradient(#fff 0%, #ffffff 20%, transparent 21%, transparent 40%, #fff 41%, #fff 60%, transparent 61%, transparent 80%, #ffffff 81% ,#ffffff 100%);
+}
+
+
+@media (max-width: 425px) {
+    
+    .left_header, .filtre, .right_header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .left_header {
+        height: 20vh;
+    }
+
+    select, .left_header .date {
+        width: 100%;
+        height: 25%;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+    }
+
+    .right_header {
+        height: 40%;
+    }
+
+    
+
+    .container_voitures {
+        height: 30vh;
+        width: 90%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    
+
+
+    .desc_v {
+        display: none;
+    }
+
+    .left {
+        height: 40vh;
+        width: 100%;
+    }
+
+    .right {
+        height: 30vh;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right button {
+        font-size: 9px;
+        width: 100%;
+        
+    }
+
+    footer {
+        width: 90%;
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media (max-width: 980px) {
+    .filtre, .right_header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .left_header {
+        width: 100%;
+        height: 5vh;
+        box-sizing: border-box;
+        
+    }
+
+   
+
+    .left_header button, .left_header .date {
+        width: 30%;
+        height: 90%;
+    }
+
+    .date input {
+        width: 100%;
+        height: 100%;
+    }
+
+    .right_header {
+        height: 40%;
+    }
+ 
+
+
+
+    
+    .container_voitures {
+        height: 30vh;
+        width: 90%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    
+
+
+    .desc_v {
+        display: none;
+    }
+
+    .left {
+        height: 40vh;
+        width: 100%;
+    }
+
+    .right {
+        height: 30vh;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right button {
+        font-size: 9px;
+        width: 100%;
+        
+    }
+
+    footer {
+        width: 90%;
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
